@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VIDI Brechó | Peças únicas, histórias que continuam</title>
+  <meta name="description" content="VIDI Brechó: moda circular, peças selecionadas e muito estilo. Venha garimpar.">
+  <meta name="theme-color" content="#3e2a1e">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="is-loading">
+
+  <!-- ================= INTRO / PRELOADER ================= -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__panel preloader__panel--top"></div>
+    <div class="preloader__panel preloader__panel--bottom"></div>
+    <div class="preloader__content">
+      <div class="preloader__logo" aria-label="VIDI">
+        <span>V</span><span>I</span><span>D</span><span>I</span>
+      </div>
+      <p class="preloader__tag">brechó</p>
+      <div class="preloader__bar"><i id="preloaderBar"></i></div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <a href="#inicio" class="header__brand">VIDI</a>
+    <nav class="nav" id="nav" aria-label="Menu principal">
+      <a href="#destaques">Destaques</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="./provador virtual/provador.html">Provador Virtual</a>
+      <a href="#visite" class="nav__cta">Visite a loja</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg">
+        <source src="assets/video/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay"></div>
+      <div class="hero__grain"></div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow">moda circular · peças únicas</p>
+        <h1 class="hero__logo" aria-label="VIDI Brechó">
+          <span>V</span><span>I</span><span>D</span><span>I</span>
+        </h1>
+        <p class="hero__sub">brechó</p>
+        <a href="#destaques" class="btn btn--light">Descobrir as peças</a>
+      </div>
+
+      <a href="#destaques" class="hero__scroll" aria-label="Rolar para baixo">
+        <span>scroll</span><i></i>
+      </a>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>peças únicas</span><span>✦</span><span>moda sustentável</span><span>✦</span><span>garimpo com curadoria</span><span>✦</span><span>estilo com história</span><span>✦</span>
+        <span>peças únicas</span><span>✦</span><span>moda sustentável</span><span>✦</span><span>garimpo com curadoria</span><span>✦</span><span>estilo com história</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- ================= CARROSSEL ================= -->
+    <section class="section carousel-section" id="destaques">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">novidades da semana</p>
+          <h2 class="title">Peças em <em>destaque</em></h2>
+          <p class="lead">Cada peça é única e chega uma só vez. Dá uma olhada no que acabou de entrar na loja.</p>
+        </header>
+      </div>
+
+      <div class="carousel reveal" id="carousel">
+        <div class="carousel__viewport" id="carouselViewport" tabindex="0" aria-label="Carrossel de peças">
+          <ul class="carousel__track" id="carouselTrack">
+            <!-- Troque as imagens em assets/img/peca-1.jpg ... peca-8.jpg -->
+            <li class="slide"><figure class="card"><img src="imagens/casaco-feminino-de-la-batida-patricia-foster_1257063_1_1.webp" alt="Peça em destaque 4" loading="lazy"><figcaption><small>Casacos</small><strong>Casaco de lã</strong></figcaption></figure></li>
+            <li class="slide"><figure class="card"><img src="imagens/camisa-linho-cru-man.jpg" alt="Peça em destaque 3" loading="lazy"><figcaption><small>Blusas</small><strong>Camisa de linho</strong></figcaption></figure></li>
+            <li class="slide"><figure class="card"><img src="imagens/homem-calca-alfaiataria-ivory-close-fundo-branco.webp" alt="Peça em destaque 5" loading="lazy"><figcaption><small>Calças</small><strong>Calça alfaiataria</strong></figcaption></figure></li>
+            <li class="slide"><figure class="card"><img src="imagens/388685-1.webp" alt="Peça em destaque 6" loading="lazy"><figcaption><small>Saias</small><strong>Saia plissada</strong></figcaption></figure></li>
+            <li class="slide"><figure class="card"><img src="imagens/367019_57809_1-VESTIDO-MIDI-FLORAL-DELICADO.jpg" alt="Peça em destaque 1" loading="lazy"><figcaption><small>Vestidos</small><strong>Vestido midi floral</strong></figcaption></figure></li>
+            <li class="slide"><figure class="card"><img src="imagens/c02143a930751d0aee30030c747b53041201c93f.avif" alt="Peça em destaque 2" loading="lazy"><figcaption><small>Jaquetas</small><strong>Jaqueta jeans vintage</strong></figcaption></figure></li>
+            <li class="slide"><figure class="card"><img src="imagens/bolsa couro retro.jfif" alt="Peça em destaque 7" loading="lazy"><figcaption><small>Acessórios</small><strong>Bolsa couro retrô</strong></figcaption></figure></li>
+            <li class="slide"><figure class="card"><img src="imagens/Cardigan_Feminio_Croche_Floral_Caqui_1.webp" alt="Peça em destaque 8" loading="lazy"><figcaption><small>Tricôs</small><strong>Cardigan artesanal</strong></figcaption></figure></li>
+          </ul>
+        </div>
+
+        <div class="carousel__controls container">
+          <div class="carousel__progress"><i id="carouselProgress"></i></div>
+          <div class="carousel__buttons">
+            <button class="round" id="prevBtn" aria-label="Anterior">&larr;</button>
+            <button class="round" id="nextBtn" aria-label="Próximo">&rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SOBRE ================= -->
+    <section class="section about" id="sobre">
+      <div class="container about__grid">
+        <div class="about__media reveal">
+          <div class="about__img about__img--a"><img src="imagens/IA9tS8IRWG4Mk11K8PjnDPMoLTNyJw6U1htogWwVemToquxfNBgYCbo5IaLrr2tEhbpnLeEX1_pk7UaqDtO8K08Rqd_XYuYrQe8YDhspRJ9WVEttP3NtAVkX6tbdU0zeEWNNvsXndejyY6ggtEDHH2VuKcqn4wZDqeQtxgQAXja9-mzI-kPaSAP02f3OPEDV.jfif" alt="Interior da loja VIDI" loading="lazy"></div>
+          <div class="about__img about__img--b"><img src="imagens/Wk0NRGH_lXZpn-UI3nJvPACl0BAhwz3IiYQBx1kPVJLcdbsTCmmAlK2IbklIaQ6woMZ4Zw2__CKfKMiI5gGYl-_lU34hdC0ufFPvSYtUPvbpJirypd_1bc7HO0sv1HYsxrR9BvPlWVhdcL7r0cDaFYoric17b0I-6tbIxcK7ZOOzWuLwEjVHGdf8YSTSX55I.jfif" alt="Detalhe das peças da loja" loading="lazy"></div>
+          <div class="about__badge">desde<br><strong>VIDI</strong></div>
+        </div>
+        <div class="about__text reveal">
+          <p class="eyebrow">nossa história</p>
+          <h2 class="title">Vestir bem também é <em>cuidar do mundo</em></h2>
+          <p>O VIDI nasceu da paixão por peças com alma. Cada item é escolhido a dedo, higienizado e preparado para viver uma nova história com você.</p>
+          <p>Acreditamos que moda boa não precisa ser nova: precisa ter personalidade, qualidade e um preço justo. Aqui você encontra estilo, economia e consumo consciente no mesmo lugar.</p>
+          <ul class="values">
+            <li><span>01</span> Curadoria cuidadosa</li>
+            <li><span>02</span> Peças higienizadas</li>
+            <li><span>03</span> Preço justo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CATEGORIAS ================= -->
+    <section class="section categories" id="categorias">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">explore</p>
+          <h2 class="title">Encontre o seu <em>estilo</em></h2>
+        </header>
+        <div class="cat-grid">
+          <a href="#visite" class="cat reveal"><img src="imagens/feminino.jfif" alt="" loading="lazy"><span>Feminino</span></a>
+          <a href="#visite" class="cat reveal"><img src="imagens/masculino.jfif" alt="" loading="lazy"><span>Masculino</span></a>
+          <a href="#visite" class="cat reveal"><img src="imagens/acessorios.jfif" alt="" loading="lazy"><span>Acessórios</span></a>
+          <a href="#visite" class="cat reveal"><img src="imagens/calcados.jfif" alt="" loading="lazy"><span>Calçados</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COMO FUNCIONA ================= -->
+    <section class="section steps" id="como-funciona">
+      <div class="container">
+        <header class="section__head section__head--light reveal">
+          <p class="eyebrow">simples assim</p>
+          <h2 class="title">Como funciona o <em>VIDI</em></h2>
+        </header>
+        <div class="steps__grid">
+          <article class="step reveal"><b>01</b><h3>Garimpe</h3><p>Passeie pelas araras e encontre peças que combinam com você.</p></article>
+          <article class="step reveal"><b>02</b><h3>Experimente</h3><p>Prove com calma no nosso provador e leve só o que amar.</p></article>
+          <article class="step reveal"><b>03</b><h3>Leve para casa</h3><p>Pague de forma prática e saia com uma peça única.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VISITE ================= -->
+    <section class="section visit" id="visite">
+      <div class="container visit__grid">
+        <div class="reveal">
+          <p class="eyebrow">venha nos conhecer</p>
+          <h2 class="title">Visite a <em>loja</em></h2>
+          <p class="lead">Estamos esperando você para um café, um garimpo e muita conversa boa.</p>
+          <ul class="info">
+            <li><strong>Endereço</strong><span>Rua Exemplo, 123 · Seu bairro, Sua cidade</span></li>
+            <li><strong>Horário</strong><span>Seg a Sex: 10h às 19h · Sáb: 10h às 17h</span></li>
+            <li><strong>Contato</strong><span>(00) 00000-0000</span></li>
+          </ul>
+          <div class="visit__actions">
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="btn">Chamar no WhatsApp</a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener" class="btn btn--outline">Instagram</a>
+          </div>
+        </div>
+        <div class="map reveal">
+          <!-- Substitua o src pelo link de incorporação do Google Maps da sua loja -->
+          <iframe title="Localização do VIDI" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Porto+Alegre&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="footer__brand">VIDI</a>
+      <p>Moda circular com muito estilo.</p>
+      <small>&copy; <span id="year"></span> VIDI Brechó. Todos os direitos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

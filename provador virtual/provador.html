@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Provador Virtual | VIDI Brechó</title>
+  <meta name="description" content="Combine as peças da VIDI no provador virtual e peça dicas de look à nossa consultora de estilo com IA.">
+  <meta name="theme-color" content="#3e2a1e">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="provador.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <a href="../index.html" class="header__brand">VIDI</a>
+    <nav class="nav" aria-label="Menu">
+      <a href="#mentora">Mentora de looks</a>
+      <a href="../index.html#visite" class="nav__cta">Visite a loja</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== TOPO DA PÁGINA ===== -->
+    <section class="top" id="topo">
+      <p class="eyebrow">provador virtual</p>
+      <h2 class="title">Monte o look e <em>veja como fica</em></h2>
+      <p class="lead">Escolha o corpo, troque as peças com as setas e guarde a combinação que mais combina com você.</p>
+    </section>
+
+    <!-- ===== PROVADOR ===== -->
+    <section class="section fitting" id="provador">
+      <div class="container">
+        <div class="gender" role="tablist" aria-label="Escolha o perfil">
+          <button class="gender__btn is-active" data-gender="fem" role="tab" aria-selected="true">Feminino</button>
+          <button class="gender__btn" data-gender="masc" role="tab" aria-selected="false">Masculino</button>
+          <i class="gender__pill" id="genderPill"></i>
+        </div>
+
+        <div class="fitting__grid">
+          <div class="stage" id="stage">
+            <div class="stage__halo"></div>
+            <div class="stage__figure" id="figure">
+              <div class="body" id="body"></div>
+              <div class="layer layer--bottom" id="layer-bottom"></div>
+              <div class="layer layer--shoes" id="layer-shoes"></div>
+              <div class="layer layer--top" id="layer-top"></div>
+            </div>
+
+            <div class="picker picker--top">
+              <button class="round" data-slot="top" data-dir="-1" aria-label="Peça de cima anterior">&larr;</button>
+              <button class="round" data-slot="top" data-dir="1" aria-label="Próxima peça de cima">&rarr;</button>
+            </div>
+            <div class="picker picker--bottom">
+              <button class="round" data-slot="bottom" data-dir="-1" aria-label="Peça de baixo anterior">&larr;</button>
+              <button class="round" data-slot="bottom" data-dir="1" aria-label="Próxima peça de baixo">&rarr;</button>
+            </div>
+            <div class="picker picker--shoes">
+              <button class="round" data-slot="shoes" data-dir="-1" aria-label="Calçado anterior">&larr;</button>
+              <button class="round" data-slot="shoes" data-dir="1" aria-label="Próximo calçado">&rarr;</button>
+            </div>
+          </div>
+
+          <aside class="summary">
+            <h3>Seu look</h3>
+            <ul class="summary__list">
+              <li><small>Parte de cima</small><strong id="name-top">—</strong></li>
+              <li><small>Parte de baixo</small><strong id="name-bottom">—</strong></li>
+              <li><small>Calçado</small><strong id="name-shoes">—</strong></li>
+            </ul>
+            <div class="summary__actions">
+              <button class="btn" id="askBtn">Pedir opinião da mentora</button>
+              <button class="btn btn--outline" id="shuffleBtn">Surpreenda-me</button>
+            </div>
+            <p class="summary__hint">Ilustração de apresentação. As peças reais estão na loja, e cada uma é única: venha experimentar.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MENTORA IA ===== -->
+    <section class="section mentor" id="mentora">
+      <div class="container mentor__grid">
+        <div class="mentor__intro">
+          <p class="eyebrow">mentora de looks</p>
+          <h2 class="title">Uma segunda opinião <em>sobre seu estilo</em></h2>
+          <p class="lead">Conte a ocasião, o clima ou o que você gosta. A mentora enxerga o look que você montou e sugere ajustes.</p>
+          <div class="chips" id="chips">
+            <button class="chip">Esse look serve para um jantar?</button>
+            <button class="chip">Como deixar o visual mais elegante?</button>
+            <button class="chip">Que acessório combina com isso?</button>
+            <button class="chip">Quero algo casual para o fim de semana</button>
+          </div>
+        </div>
+
+        <div class="chat" aria-live="polite">
+          <div class="chat__head">
+            <span class="chat__avatar">V</span>
+            <div><strong>Mentora VIDI</strong><small id="chatStatus">pronta para ajudar</small></div>
+          </div>
+          <div class="chat__log" id="chatLog"></div>
+          <form class="chat__form" id="chatForm">
+            <input id="chatInput" type="text" placeholder="Pergunte sobre seu look…" autocomplete="off" aria-label="Sua mensagem">
+            <button class="chat__send" type="submit" aria-label="Enviar">&rarr;</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="index.html" class="footer__brand">VIDI</a>
+      <p>Moda circular com muito estilo.</p>
+      <small>&copy; <span id="year"></span> VIDI Brechó. Todos os direitos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="provador.js"></script>
+</body>
+</html>
